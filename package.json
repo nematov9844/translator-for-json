@@ -1,15 +1,31 @@
 {
-  "name": "json-translator",
+  "name": "json-translator-cli",
   "version": "1.0.0",
+  "description": "CLI tool to translate JSON values while preserving keys",
   "type": "module",
   "bin": {
-    "jtr": "./dist/index.js"
+    "jtr": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "json",
+    "translator",
+    "cli",
+    "i18n",
+    "localization"
+  ],
+  "author": "NR_Stylle",
+  "license": "ISC",
   "dependencies": {
     "chalk": "^5.6.2",
     "commander": "^14.0.3",
